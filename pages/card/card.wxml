@@ -1,0 +1,23 @@
+<view class='container'>
+  <image bindtap="previewImg" src="{{imagePath}}"></image>
+	<view wx:if="{{haveCourse}}">
+		<text style="font-size:120rpx;">{{random}}</text>
+	</view>
+</view>
+<view class='container content' wx:if="{{haveCourse}}">
+	<text style="font-size:120rpx;">{{random}}</text>
+  <view class="border borderTitle">第{{courseTime[0].week}}周 星期{{courseTime[0].sunday}} 第{{courseTime[0].time}}-{{courseTime[0].time+1}}节课</view>
+</view>
+<view class='container content'  wx:if="{{haveCourse}}">
+  <view wx:for="{{title}}" class="border borderTitle" wx:key="{{index}}">{{item}}</view>
+</view>
+<view class="container content" wx:for="{{students}}" wx:key="{{index}}"  wx:if="{{haveCourse}}">
+  <view class="border">{{item.username}}</view>
+  <view class="border">{{item.stuid}}</view>
+  <view class="border {{item.msg=='已打卡'?'red':''}}">{{item.msg}}</view>
+</view>
+<view class="container container1" wx:if="{{!haveCourse}}">
+	<text>今天暂无课程</text>
+	<image class="image" mode="widthFix" src="../../icons/noRecord.png"></image>
+</view>
+<button type="primary" bindtap="navigate">补到</button>

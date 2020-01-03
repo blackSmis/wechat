@@ -1,0 +1,17 @@
+.create{
+  background-color: rgb(251,249,254);
+}
+.title{
+  height: 100rpx;
+  line-height:100rpx;
+  margin: 0 20rpx;
+}
+.picker{
+  background-color: white;
+  height: 100rpx;
+  padding-left: 20rpx;
+  line-height: 100rpx;
+}
+.className{
+	margin: 0 20rpx 20rpx 20rpx;
+}

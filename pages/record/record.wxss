@@ -1,0 +1,21 @@
+.container{
+	flex-direction: row;
+	height: 60rpx;
+	justify-content: space-around;
+	padding: 20rpx 0;
+}
+.container1{
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+	padding: 20rpx 0;
+}
+.time{
+	font-size: 20rpx;
+}
+.image{
+	width: 400rpx;
+}
+.red{
+	color: red;
+}

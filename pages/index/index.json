@@ -1,0 +1,10 @@
+{
+	"usingComponents": {
+		"van-collapse": "../../vant/collapse/index",
+		"van-collapse-item": "../../vant/collapse-item/index",
+		"van-grid": "../../vant/grid/index",
+		"van-grid-item": "../../vant/grid-item/index",
+		"van-button": "../../vant/button/index",
+		"van-icon": "../../vant/icon/index"
+	}
+}

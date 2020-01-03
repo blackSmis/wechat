@@ -1,0 +1,13 @@
+.container{
+	flex-direction: row;
+	height: 60rpx;
+	justify-content: space-around;
+	padding: 20rpx 0;
+}
+.border{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	text-align: center;
+	height: 52rpx;
+	flex: 1;
+}

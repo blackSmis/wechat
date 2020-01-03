@@ -1,0 +1,67 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">是否为老师</view>
+        <view class="weui-cell__ft">
+          <switch bindchange="switch" />
+        </view>
+      </view>
+      <view wx:if="{{!stuTec}}">
+        <mp-form id="form" rules="{{rulesStu}}" models="{{formDataStu}}">
+          <mp-cells title="学生信息">
+            <mp-cell prop="username" title="姓名" ext-class="">
+              <input bindinput="formInputChangeStu" data-field="username" class="weui-input" placeholder="请输入姓名" />
+            </mp-cell>
+            <mp-cell prop="uid" title="学号" ext-class="">
+              <input bindinput="formInputChangeStu" data-field="stuid" class="weui-input" placeholder="请输入学号" />
+            </mp-cell>
+						<mp-cell prop="college" title="学校" ext-class="">
+              <input bindinput="formInputChangeStu" data-field="college" class="weui-input" placeholder="请输入学校" />
+            </mp-cell>
+						<mp-cell prop="system" title="院系" ext-class="">
+              <input bindinput="formInputChangeStu" data-field="system" class="weui-input" placeholder="请输入院系" />
+            </mp-cell>
+            <mp-cell prop="email" title="邮箱" ext-class="">
+              <input bindinput="formInputChangeStu" data-field="email" class="weui-input" placeholder="请输入邮箱" />
+            </mp-cell>
+          </mp-cells>
+        </mp-form>
+				<view class="section">
+						<picker bindchange="bindClassChange" name="class" value="{{myClass[[classIndex]]}}"
+							range="{{myClass}}">
+							<view class="picker">
+								选择班级：<text style="margin-left:30%">{{myClass[[classIndex]]}}</text>
+							</view>
+						</picker>
+					</view>
+        <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" bindtap="submitFormStu">提交</button>
+        </view>
+
+      </view>
+      <view wx:else>
+        <mp-form id="form" rules="{{rulesTec}}" models="{{formDataTec}}">
+          <mp-cells title="老师信息">
+            <mp-cell prop="username" title="姓名" ext-class="">
+              <input bindinput="formInputChangeTec" data-field="username" class="weui-input" placeholder="请输入姓名" />
+            </mp-cell>
+            <mp-cell prop="college" title="学校" ext-class="">
+              <input bindinput="formInputChangeTec" data-field="college" class="weui-input" placeholder="请输入学校" />
+            </mp-cell>
+            <mp-cell prop="system" title="院系" ext-class="">
+              <input bindinput="formInputChangeTec" data-field="system" class="weui-input" placeholder="请输入院系" />
+            </mp-cell>
+            <mp-cell prop="email" title="邮箱" ext-class="">
+              <input bindinput="formInputChangeTec" data-field="email" class="weui-input" placeholder="请输入邮箱" />
+            </mp-cell>
+          </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" bindtap="submitFormTec">提交</button>
+        </view>
+      </view>
+</view>
+    </view>
+  </view>

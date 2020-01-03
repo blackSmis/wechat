@@ -1,0 +1,3 @@
+.weui-input{
+	margin-left: -16rpx;
+}

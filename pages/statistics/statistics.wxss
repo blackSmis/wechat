@@ -1,0 +1,9 @@
+.container{
+	flex-direction: row;
+	height: 60rpx;
+	justify-content: space-around;
+	padding: 20rpx 0;
+}
+.red{
+	color: red;
+}

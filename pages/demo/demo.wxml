@@ -1,0 +1,4 @@
+<view>如果您是第一次进入，请先创建班级</view>
+<button bindtap="create" type="primary">创建班级</button>
+<view>若是您已经有班级，请点击下面的按钮</view>
+<button bindtap="having" type="warn">已有班级</button>

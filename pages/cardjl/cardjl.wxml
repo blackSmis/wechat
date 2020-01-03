@@ -1,0 +1,14 @@
+<form bindsubmit="formSubmit">
+	<view class="container">
+		<view wx:for="{{title}}" class="border borderTitle" wx:key="{{index}}">{{item}}</view>
+	</view>
+	<view class="container" wx:for="{{card}}" wx:key="{{index}}">
+		<view class="border">{{item.username}}</view>
+		<view class="border">{{item.stuid}}</view>
+		<view class="border">{{item.getNum}}</view>
+		<view class="border">{{item.late}}</view>
+		<input class="border" type="number" name="{{item.tid}}_{{item.stuid}}" bindinput="inputChange" value="{{item.result}}" />	
+	</view>
+	<button form-type="submit">提交</button>
+</form>
+<button bindtap="back">回到首页</button>

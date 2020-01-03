@@ -1,0 +1,13 @@
+<view class="container">
+  <view wx:for="{{title}}" class="border borderTitle" wx:key="{{index}}">{{item}}</view>
+</view>
+<view class="container" wx:for="{{students}}" wx:key="{{index}}">
+  <view class="border">{{item.stuid}}</view>
+  <view class="border">{{item.username}}</view>
+  <view class="border">
+    <view class="button edit" bindtap="edit" data-stuid="{{item.stuid}}">修改</view>
+    <view class="button delete" data-stuid="{{item.stuid}}" bindtap="delete">删除</view>
+  </view>
+</view>
+<button bindtap="back">回到首页</button>
+<button bindtap="add">添加学生</button>

@@ -1,0 +1,53 @@
+.query {
+  padding-top: 90rpx;
+}
+
+.query .query_item_name {
+  font-family: PingFangSC-Regular;
+  font-size: 66rpx;
+  color: #737586;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.query_num_block {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+  margin: 80rpx auto 110rpx;
+}
+.check .confirm {
+  margin: auto;
+  width: 200rpx;
+  height: 68rpx;
+  background: #f86221;
+  border-radius: 33px;
+  text-align: center;
+  line-height: 68rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 30rpx;
+  color: #fff;
+  letter-spacing: 0;
+}
+.num_item_block {
+  height: 140rpx;
+  width: 120rpx;
+  border: 1px solid #cdcdcd;
+  font-family: PingFangSC-Regular;
+  border-radius: 8rpx;
+  line-height: 116rpx;
+  text-align: center;
+  font-size: 80rpx;
+  color: #25252b;
+}
+.hidden_ipt {
+  height: 0rpx;
+  width: 0rpx;
+  border: none;
+  margin: 0;
+}
+button{
+	width:360rpx;
+}

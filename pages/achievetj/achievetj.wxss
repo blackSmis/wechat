@@ -1,0 +1,15 @@
+.container{
+	flex-direction: row;
+	height: 60rpx;
+	justify-content: space-around;
+	padding: 20rpx 0;
+}
+.bod{
+	border-bottom: 1px solid #ccc;
+}
+.borderTitle{
+	background: #ccc;
+}
+.borderNextTitle{
+	background: #eee;
+}

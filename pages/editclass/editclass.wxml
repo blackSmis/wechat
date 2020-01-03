@@ -1,0 +1,22 @@
+<form bindsubmit="formSubmit">
+	<view class="create">
+		<view>
+			<view class="title">选择年级</view>
+			<view class="section">
+				<picker bindchange="bindClassChange" name="class" value="{{class[[classIndex]]}}"
+					range="{{class}}">
+					<view class="picker">
+						当前选择：<text style="margin-left:30%">{{class[[classIndex]]}}</text>
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view>
+			<view class="title">编辑班级名称</view>
+			<view class="section">
+				<input class="className" placeholder="请在此填写班级名称" name="className" value="{{currentData.className}}" />
+			</view>
+			<button form-type="submit" type="primary">确认修改班级信息</button>
+		</view>
+	</view>
+</form>

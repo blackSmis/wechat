@@ -1,0 +1,11 @@
+<view class="container" wx:if="canIUse">
+    <view class='header'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='content'>
+      <view class="mglft">申请获取以下权限</view>
+      <text class="mglft">获得你的公开信息(昵称，头像等)</text>
+      <button bindgetuserinfo="login" class="botton" type="primary" open-type="getUserInfo">授权登录</button>
+    </view>
+</view>
+<view wx:else>请升级微信版本</view>

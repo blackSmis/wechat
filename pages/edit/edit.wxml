@@ -1,0 +1,25 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="用户信息">
+          <mp-cell prop="username" title="姓名" ext-class="">
+            <input bindinput="formInputChange" value="{{myInfo.username}}" data-field="username" class="weui-input" placeholder="请输入姓名" />
+          </mp-cell>
+          <mp-cell prop="college" title="学校" ext-class="">
+            <input bindinput="formInputChange" value="{{myInfo.college}}" data-field="college" class="weui-input" placeholder="请输入学校" />
+          </mp-cell>
+          <mp-cell prop="system" title="院系" ext-class="">
+            <input bindinput="formInputChange" value="{{myInfo.system}}" data-field="system" class="weui-input" placeholder="请输入院系" />
+          </mp-cell>
+          <mp-cell prop="email" title="邮箱" ext-class="">
+            <input bindinput="formInputChange" value="{{myInfo.email}}" data-field="email" class="weui-input" placeholder="请输入邮箱" />
+          </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+      <button class="weui-btn" type="primary" bindtap="cancel">取消编辑</button>
+    </view>
+  </view>
+</view>

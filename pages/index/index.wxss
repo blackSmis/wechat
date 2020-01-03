@@ -1,0 +1,105 @@
+.isshow{
+	display: none;
+}
+/* 整体 */
+.body{
+	background-color: #ddd;
+	height: 100%;
+	padding-bottom: 100rpx;
+}
+/* 头部 */
+.header{
+	display: flex;
+	width: 100%;
+	background-color: #eee;
+	height: 80rpx;
+	border-bottom: 1px solid #999;
+}
+.header .button{
+	width: 250rpx;
+	padding: 8rpx 0 8rpx 40rpx;
+}
+
+.header .function{
+	width: 250rpx;
+	padding: 10rpx 0 8rpx 40rpx;
+}
+.header .function image{
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.title{
+	color: green;
+	padding: 20rpx;
+}
+/* 内容 */
+.content{
+	width: 100%;
+	text-align: center;
+}
+.myClass{
+	width: 90%;
+	margin-left: 5%;
+	background-color: rgb(167, 161, 136);
+	border-radius: 20rpx;
+	border: 1px solid #ddd;
+	position: relative;
+}
+.text{
+	text-align: center;
+	display: block;
+}
+.delete{
+	position: absolute;
+	height: 100rpx;
+	right: 100rpx;
+	top: 5rpx;
+}
+.edit{
+	position: absolute;
+	height: 100rpx;
+	right: 160rpx;
+	top: 5rpx;
+}
+.container{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:	20rpx; 
+	padding: 0 0 40rpx 0;
+	background-color:whitesmoke; 
+}
+.lists{
+	margin-top: 10rpx;
+	border-radius: 20rpx;
+	margin-bottom: 10rpx;
+	background-color: #eee;
+}
+.lists .list{
+  display: flex;
+  width: 98%;
+  justify-content: space-between; 
+}
+.lists .list .menu{
+	border:1px solid #a5b6c8;
+	/* background-color:#eef3f7; */
+  background-color: gainsboro;
+  text-align: center;
+  margin: 4rpx 4rpx;
+  color: #999;
+	border-radius: 10rpx;
+	padding: 4rpx;
+	width: 23%;
+}
+.lists .list .menu image{
+  width: 60%;
+  margin: 0 20%;
+  opacity: 0.7;
+}
+.none{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10rpx;
+	background-color: yellow;
+	color: red;
+}

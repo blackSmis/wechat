@@ -1,0 +1,18 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="学生信息" footer="输入完请点击添加">
+                <mp-cell prop="username" title="姓名" ext-class="">
+                    <input bindinput="formInputChange" data-field="username" class="weui-input" placeholder="请输入姓名"/>
+                </mp-cell>
+								 <mp-cell prop="stuid" title="学号" ext-class="">
+                    <input bindinput="formInputChange" data-field="stuid" class="weui-input" placeholder="请输入学号(4~16位数字)"/>
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">添加</button>
+        </view>
+    </view>
+</view>

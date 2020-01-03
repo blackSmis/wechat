@@ -1,0 +1,34 @@
+<form bindsubmit="formSubmit">
+  <view wx:for="{{test}}" wx:key="index" wx:for-item="test">
+    <view class="container" data-testName="{{test.testName}}" bindtap="hidden">
+      <view class="border bod borderTitle">{{test.testName}}</view>
+      <view class="border bod borderTitle">{{test.percent}}%</view>
+    </view>
+    <view hidden="{{test.show?'true':''}}">
+      <view class="container">
+        <view wx:for="{{title}}" class="border borderNextTitle" wx:key="{{index}}">{{item}}</view>
+      </view>
+      <view wx:if="{{show}}">
+        <view class="container" wx:for="{{result}}" wx:key="{{index}}" wx:if="{{test.tid==item.tid}}">
+          <view class="border">{{item.username}}</view>
+          <view class="border">{{item.stuid}}</view>
+          <view class="border">{{item.course}}</view>
+          <input class="border" type="number" name="{{test.tid}}_{{item.stuid}}" bindinput="inputChange" value="{{item.result}}" />
+        </view>
+      </view>
+      <view wx:else>
+        <view class="container" wx:for="{{result}}" wx:key="{{index}}">
+          <view class="border">{{item.username}}</view>
+          <view class="border">{{item.stuid}}</view>
+          <view class="border">{{item.course}}</view>
+          <view class="border">
+            <input type="number" name="{{test.tid}}_{{item.stuid}}" bindinput="inputChange" value="{{item.result}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button form-type="submit">提交</button>
+</form>
+<button bindtap="back">回到首页</button>
+<button bindtap="edit">编辑科目</button>

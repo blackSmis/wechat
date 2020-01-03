@@ -1,0 +1,16 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+				            <mp-cells title="科目编辑" footer="输入完请点击添加">
+                <mp-cell prop="course" title="科目" ext-class="">
+                    <input bindinput="formInputChange" data-field="course" class="weui-input" placeholder="请输入科目" />
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+						<button class="weui-btn" type="primary" bindtap="cancel">取消编辑</button>
+        </view>
+    </view>
+</view>

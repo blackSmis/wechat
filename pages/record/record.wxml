@@ -1,0 +1,25 @@
+<view class="container">
+  <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+    <view class="picker">
+      查询日期: {{date}}
+    </view>
+  </picker>
+</view>
+<view wx:if="{{haveRecord}}">
+  <view class="container">
+    <view wx:for="{{title}}" class="border borderTitle" wx:key="{{index}}">{{item}}</view>
+  </view>
+  <view class="container" wx:for="{{record}}" wx:key="{{index}}">
+    <view class="border">{{item.username}}</view>
+    <view class="border">{{item.stuid}}</view>
+    <view class="border time">{{item.currentTime}}</view>
+    <view class="border {{item.status=='迟到'?'red':''}}">{{item.status}}</view>
+  </view>
+</view>
+<view wx:else>
+	<view class="container container1">
+		<text>今日无打卡信息</text>
+		<image class="image" mode="widthFix" src="../../icons/noRecord.png"></image>
+	</view>
+</view>
+<button bindtap="back">回到首页</button>

@@ -1,0 +1,22 @@
+.container{
+	padding: 20rpx 0;
+}
+.container1{
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+	padding: 20rpx 0;
+}
+.content{
+	flex-direction: row;
+	height: 60rpx;
+	justify-content: space-around;
+}
+image{
+	display: inline-block;
+	width: 450rpx;
+	height: 450rpx;
+}
+.red{
+	color: red;
+}

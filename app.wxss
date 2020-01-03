@@ -1,0 +1,29 @@
+@import './weui/weui-wxss/dist/style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+button{
+	font-size: 34rpx;
+}
+.border{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	text-align: center;
+	flex: 1;
+	font-family: verdana,arial,sans-serif;
+	font-size: 34rpx;
+	color:#333333;
+	border-color: #666666;
+}
+.borderTitle{
+	background: #eee;
+}
+input{
+	height: 19.6rpx;
+}

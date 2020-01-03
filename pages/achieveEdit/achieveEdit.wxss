@@ -1,0 +1,16 @@
+.left {
+  width: 60%;
+  float: left;
+  margin-left: 20%;
+  margin-top: 20rpx;
+  border: 1px solid #ccc;
+  height: 50rpx;
+  padding: 10rpx;
+  border-radius: 4%;
+}
+.demo {
+  color: #ccc;
+}
+.display {
+  display: none;
+}

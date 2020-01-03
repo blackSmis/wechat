@@ -1,0 +1,34 @@
+<view wx:if="{{teacher}}">
+  <van-button bindtap="create" size="small" plain type="primary">创建班级</van-button>
+  <van-button bindtap="change" size="small" type="{{fctShow?'primary':'default'}}">{{fctShow?'完成':'编辑'}}</van-button>
+  <view wx:if="{{myClass.length!=0}}">
+    <view class="content">
+      <view class="title">我的班级</view>
+    </view>
+    <van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
+      <van-collapse-item wx:for="{{myClass}}" wx:for-item="myClass" wx:key="classIndex" title="{{myClass.class}} {{myClass.className}}" name="{{classIndex}}">
+        <van-icon size="50rpx" class="delete {{fctShow?'':'isshow'}}" name="delete" catchtap="delete" data-cid="{{myClass.cid}}" />
+        <van-icon size="50rpx" class="edit {{fctShow?'':'isshow'}}" name="edit" catchtap="edit" data-cid="{{myClass.cid}}" />
+        <van-grid column-num="4">
+          <van-grid-item icon="../../icons/{{item.src}}" url="../{{item.url}}/{{item.url}}?class={{myClass.class}}&className={{myClass.className}}&cid={{myClass.cid}}" text="{{item.name}}" wx:for="{{functions}}" wx:key="{{index}}" />
+        </van-grid>
+        <van-grid column-num="4">
+          <van-grid-item icon="../../icons/{{item.src}}" url="../{{item.url}}/{{item.url}}?class={{myClass.class}}&className={{myClass.className}}&cid={{myClass.cid}}" text="{{item.name}}" wx:for="{{news}}" wx:key="{{index}}" />
+        </van-grid>
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+  <view wx:else>
+    <view class="none">您还没有班级，请点击左上角的按钮创建班级</view>
+  </view>
+</view>
+<view class="container" wx:else="{{myClass.length==0}}">
+  <view>学生打卡信息</view>
+  <view>打卡:{{stuInfo["data2"].getNum}}</view>
+  <view>迟到:{{stuInfo["data2"].late}}</view>
+  <view>学生考试信息</view>
+  <view wx:for="{{stuInfo['data1']}}" wx:key="{{index}}">
+    {{item.testName}}---{{item.result}}
+  </view>
+	<view>总成绩---{{stuInfo["data3"]}}</view>
+</view>

@@ -1,0 +1,10 @@
+<view class="container">
+    <view wx:for="{{title}}" class="border borderTitle" wx:key="{{index}}">{{item}}</view>
+  </view>
+  <view class="container" wx:for="{{result}}" wx:key="{{index}}">
+    <view class="border">{{item.username}}</view>
+    <view class="border">{{item.stuid}}</view>
+    <view class="border">{{item.course}}</view>
+    <view class="border {{item.result<60?'red':''}}">{{item.result}}</view>
+  </view>
+  <button bindtap="back">回到首页</button>

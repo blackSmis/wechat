@@ -1,0 +1,26 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+            <mp-cells title="样式(点击{{show?'隐藏':'展开'}})平时分比例自动计算" bindtap="show">
+						<view wx:for="{{listTest}}" wx:key="{{index}}" class="{{show?'':'display'}}">
+							<mp-cell prop="{{item.prop}}" title="{{item.title}}" ext-class="demo">
+											<input bindinput="formInputChange" data-field="{{item.prop}}" disabled="true" class="weui-input" value="{{item.value}}" placeholder="请输入分值比例"/>
+							</mp-cell>
+						</view>
+            </mp-cells>
+						<mp-cells title="分值分配" footer="">
+						<view wx:for="{{list}}" wx:key="{{index}}">
+							<mp-cell prop="{{item.prop}}" title="{{item.title}}" ext-class="">
+											<input bindinput="formInputChange1" data-field="{{item.prop}}" class="weui-input" value="" placeholder="请输入分值比例"/>
+							</mp-cell>
+						</view>
+            </mp-cells>
+						<input bindinput="formInputChange" data-field="title" value="{{value}}" class="weui-input left" placeholder="添加考试名称"/>
+        </mp-form>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" disabled="{{canAdd}}" bindtap="add">添加</button>
+						<button class="weui-btn" type="primary" bindtap="submitForm" disabled="{{able}}">提交</button>
+        </view>
+    </view>
+</view>
